@@ -1,0 +1,57 @@
+.t-fade-enter,
+.t-fade-exit-active {
+  // TODO: react-transition-groupが、mountされたままt-fade-exit-activeの状態で消えないケースがあるので
+  //  pointer-events: noneをつけておいて操作の妨げにならないようにだけしておく
+  //  根本的な解決にはなってないので、良い解決法を探す必要あり
+  pointer-events: none;
+  opacity: 0;
+}
+
+.t-fade-enter-active {
+  opacity: 1;
+}
+
+.t-fade-enter,
+.t-fade-exit {
+  transition: opacity $mainAnimationDuration;
+}
+
+.t-fadeDown-enter,
+.t-fadeDown-exit-active {
+  // TODO: react-transition-groupが、mountされたままt-fade-exit-activeの状態で消えないケースがあるので
+  //  pointer-events: noneをつけておいて操作の妨げにならないようにだけしておく
+  //  根本的な解決にはなってないので、良い解決法を探す必要あり
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.t-fadeDown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.t-fadeDown-enter,
+.t-fadeDown-exit {
+  transition: opacity $mainAnimationDuration, transform $mainAnimationDuration;
+}
+
+.t-fadeUp-enter,
+.t-fadeUp-exit-active {
+  // TODO: react-transition-groupが、mountされたままt-fade-exit-activeの状態で消えないケースがあるので
+  //  pointer-events: noneをつけておいて操作の妨げにならないようにだけしておく
+  //  根本的な解決にはなってないので、良い解決法を探す必要あり
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.t-fadeUp-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.t-fadeUp-enter,
+.t-fadeUp-exit {
+  transition: opacity $mainAnimationDuration, transform $mainAnimationDuration;
+}
