@@ -1,22 +1,22 @@
-# vrchat-friend-instance-list
+# vrc-friend-extension
 
-## プロジェクトClone後まずやること
+## プロジェクト Clone 後まずやること
 
 ### `.sentryclirc` の作成
 
-`.sentryclirc.sample` をコピーして、中身を埋める。Sentryのrelease登録するのに必須。
+`.sentryclirc.sample` をコピーして、中身を埋める。Sentry の release 登録するのに必須。
 
 ## コンポーネントカテゴリ
 
 コンポーネントは以下の２カテゴリで分類する。
 
-+ Presentational Component
-+ Container Component
+- Presentational Component
+- Container Component
 
 命名規則は、例えばトップページのコンポーネントの場合、
 
-+ Presentational Component => `TopPageComponent`
-+ Container Component => `TopPageContainerComponent`
+- Presentational Component => `TopPageComponent`
+- Container Component => `TopPageContainerComponent`
 
 とする。
 
@@ -38,36 +38,36 @@ export class NetworkError extends BaseError<{ status?: number }> {
 }
 ```
 
-エラーに付加情報が必要な場合は、 `details` で返すようにすること。abstractにしているので付加情報が不要な場合でも空オブジェクトを返す必要がある。
+エラーに付加情報が必要な場合は、 `details` で返すようにすること。abstract にしているので付加情報が不要な場合でも空オブジェクトを返す必要がある。
 
-## CSSの規約
+## CSS の規約
 
 ### 全体
 
-+ 命名はキャメルケース
-+ 一部、接頭語を付与する必要がある場合はケバブケースで付与（ex: `u-alignCenter` ）
+- 命名はキャメルケース
+- 一部、接頭語を付与する必要がある場合はケバブケースで付与（ex: `u-alignCenter` ）
 
 ### コンポーネント
 
-+ コンポーネントのスタイルは、CSSModuleで記述
+- コンポーネントのスタイルは、CSSModule で記述
 
-### グローバルCSS
+### グローバル CSS
 
-+ 以下のカテゴリに関しては、グローバルCSSとして定義
-+ 名前被りを防ぐために、カテゴリ毎に接頭語を付与する
+- 以下のカテゴリに関しては、グローバル CSS として定義
+- 名前被りを防ぐために、カテゴリ毎に接頭語を付与する
 
 #### utility
 
-+ 接頭語として `u-` を記述
-+ マージン調整だけしたい時など、わざわざクラスを付与してCSSを書くまでもないような時に使用
+- 接頭語として `u-` を記述
+- マージン調整だけしたい時など、わざわざクラスを付与して CSS を書くまでもないような時に使用
 
 #### transitions
 
-+ 接頭語として `t-` を記述
-+ CSSTransitionに使用するスタイル
+- 接頭語として `t-` を記述
+- CSSTransition に使用するスタイル
 
 ### 色の指定
 
-色はCSS Variablesでアプリルート（#app）に対して指定している。
+色は CSS Variables でアプリルート（#app）に対して指定している。
 
-この変数を利用して色を指定する際は `rgb` または `rgba` を必ず使用すること。（`rgba(var(--mainColor), 0.8)` みたいに指定できるようにするために、色を16進数ではなく `--blackcolor: 0, 0, 0` みたいにrgbで設定しているのでそうしないと反映されない。）
+この変数を利用して色を指定する際は `rgb` または `rgba` を必ず使用すること。（`rgba(var(--mainColor), 0.8)` みたいに指定できるようにするために、色を 16 進数ではなく `--blackcolor: 0, 0, 0` みたいに rgb で設定しているのでそうしないと反映されない。）
