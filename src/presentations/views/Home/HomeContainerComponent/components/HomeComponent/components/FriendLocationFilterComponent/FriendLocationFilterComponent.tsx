@@ -49,7 +49,7 @@ export const FriendLocationFilterComponent = (props: Props) => {
           />
         </div>
         <div className={styles.toggleButtonGroupLabel}>
-          Favoriteユーザのみ表示
+          Favoriteユーザでフィルタ
         </div>
       </div>
       <div className={styles.sortGroup}>

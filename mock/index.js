@@ -17,7 +17,7 @@ const {
 const { dummyErrorResponseList } = require('./dummyErrorResponseList')
 
 const app = express()
-app.use(express.static('mock/public'))
+app.use(express.static('build'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
